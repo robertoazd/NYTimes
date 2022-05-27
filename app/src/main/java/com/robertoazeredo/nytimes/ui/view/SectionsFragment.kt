@@ -31,37 +31,94 @@ class SectionsFragment : Fragment() {
             findNavController().popBackStack()
         }
         binding.buttonWorld.setOnClickListener {
-            println("World")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("world")
+            )
         }
         binding.buttonUs.setOnClickListener {
-            println("Us")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("us")
+            )
         }
         binding.buttonPolitics.setOnClickListener {
-            println("Politics")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("politics")
+            )
         }
         binding.buttonNy.setOnClickListener {
-            println("Ny")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("ny")
+            )
         }
         binding.buttonBusiness.setOnClickListener {
-            println("Business")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("business")
+            )
         }
         binding.buttonTech.setOnClickListener {
-            println("Tech")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("tech")
+            )
         }
         binding.buttonScience.setOnClickListener {
-            println("Science")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("science")
+            )
         }
         binding.buttonSports.setOnClickListener {
-            println("Sports")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("sports")
+            )
+        }
+        binding.buttonArts.setOnClickListener {
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("arts")
+            )
         }
         binding.buttonBooks.setOnClickListener {
-            println("Books")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("books")
+            )
         }
         binding.buttonFood.setOnClickListener {
-            println("Food")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("food")
+            )
         }
         binding.buttonTravel.setOnClickListener {
-            println("Travel")
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("travel")
+            )
+        }
+        binding.buttonGames.setOnClickListener {
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("games")
+            )
+        }
+        binding.buttonPodcasts.setOnClickListener {
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("podcasts")
+            )
+        }
+        binding.buttonJobs.setOnClickListener {
+            findNavController().navigate(
+                SectionsFragmentDirections
+                    .actionSectionsFragmentToArticlesFragment("jobs")
+            )
         }
     }
 }

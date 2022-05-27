@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.robertoazeredo.nytimes.R
 import com.robertoazeredo.nytimes.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -29,7 +28,8 @@ class HomeFragment : Fragment() {
 
     private fun setupListeners() {
         binding.buttonSections.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_sectionsFragment)
+            findNavController().navigate(HomeFragmentDirections
+                .actionHomeFragmentToSectionsFragment())
         }
     }
 }
