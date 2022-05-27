@@ -24,6 +24,10 @@ class ArticlesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println(args.section)
+        setupView()
+    }
+
+    private fun setupView() {
+        binding.textSection.text = args.section
     }
 }
