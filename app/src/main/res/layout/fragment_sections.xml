@@ -125,13 +125,22 @@
                 app:layout_constraintTop_toBottomOf="@id/button_science" />
 
             <Button
+                android:id="@+id/button_arts"
+                style="@style/ButtonPrimary"
+                android:layout_marginTop="16dp"
+                android:text="@string/arts"
+                app:layout_constraintEnd_toEndOf="@+id/button_sports"
+                app:layout_constraintStart_toStartOf="@+id/button_sports"
+                app:layout_constraintTop_toBottomOf="@id/button_sports" />
+
+            <Button
                 android:id="@+id/button_books"
                 style="@style/ButtonPrimary"
                 android:layout_marginTop="16dp"
                 android:text="@string/books"
-                app:layout_constraintEnd_toEndOf="@+id/button_sports"
-                app:layout_constraintStart_toStartOf="@+id/button_sports"
-                app:layout_constraintTop_toBottomOf="@id/button_sports" />
+                app:layout_constraintEnd_toEndOf="@+id/button_arts"
+                app:layout_constraintStart_toStartOf="@+id/button_arts"
+                app:layout_constraintTop_toBottomOf="@id/button_arts" />
 
             <Button
                 android:id="@+id/button_food"
@@ -146,12 +155,39 @@
                 android:id="@+id/button_travel"
                 style="@style/ButtonPrimary"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp"
                 android:text="@string/travel"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/button_food"
                 app:layout_constraintStart_toStartOf="@+id/button_food"
                 app:layout_constraintTop_toBottomOf="@id/button_food" />
+
+            <Button
+                android:id="@+id/button_games"
+                style="@style/ButtonPrimary"
+                android:layout_marginTop="16dp"
+                android:text="@string/games"
+                app:layout_constraintEnd_toEndOf="@+id/button_travel"
+                app:layout_constraintStart_toStartOf="@+id/button_travel"
+                app:layout_constraintTop_toBottomOf="@id/button_travel" />
+
+            <Button
+                android:id="@+id/button_podcasts"
+                style="@style/ButtonPrimary"
+                android:layout_marginTop="16dp"
+                android:text="@string/podcasts"
+                app:layout_constraintEnd_toEndOf="@+id/button_games"
+                app:layout_constraintStart_toStartOf="@+id/button_games"
+                app:layout_constraintTop_toBottomOf="@id/button_games" />
+
+            <Button
+                android:id="@+id/button_jobs"
+                style="@style/ButtonPrimary"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/jobs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/button_podcasts"
+                app:layout_constraintStart_toStartOf="@+id/button_podcasts"
+                app:layout_constraintTop_toBottomOf="@id/button_podcasts" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
