@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
+import com.robertoazeredo.nytimes.data.repository.NewsRepository
 import com.robertoazeredo.nytimes.databinding.FragmentArticlesBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ArticlesFragment : Fragment() {
 
@@ -25,9 +29,22 @@ class ArticlesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupView()
+        getNews()
     }
 
     private fun setupView() {
         binding.textSection.text = args.section
+    }
+
+    private fun getNews() {
+        NewsRepository().getNews().enqueue(object : Callback<String>{
+            override fun onResponse(call: Call<String>, response: Response<String>) {
+                println(response)
+            }
+
+            override fun onFailure(call: Call<String>, t: Throwable) {
+                println(t)
+            }
+        })
     }
 }
