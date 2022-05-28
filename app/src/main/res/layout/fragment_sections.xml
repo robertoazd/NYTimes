@@ -71,10 +71,10 @@
                 app:layout_constraintTop_toBottomOf="@id/button_world" />
 
             <Button
-                android:id="@+id/button_politics"
+                android:id="@+id/button_climate"
                 style="@style/ButtonPrimary"
                 android:layout_marginTop="16dp"
-                android:text="@string/politics"
+                android:text="@string/climate"
                 app:layout_constraintEnd_toEndOf="@+id/button_us"
                 app:layout_constraintStart_toStartOf="@+id/button_us"
                 app:layout_constraintTop_toBottomOf="@id/button_us" />
@@ -84,9 +84,9 @@
                 style="@style/ButtonPrimary"
                 android:layout_marginTop="16dp"
                 android:text="@string/ny"
-                app:layout_constraintEnd_toEndOf="@+id/button_politics"
-                app:layout_constraintStart_toStartOf="@+id/button_politics"
-                app:layout_constraintTop_toBottomOf="@id/button_politics" />
+                app:layout_constraintEnd_toEndOf="@+id/button_climate"
+                app:layout_constraintStart_toStartOf="@+id/button_climate"
+                app:layout_constraintTop_toBottomOf="@id/button_climate" />
 
             <Button
                 android:id="@+id/button_business"
@@ -161,10 +161,10 @@
                 app:layout_constraintTop_toBottomOf="@id/button_food" />
 
             <Button
-                android:id="@+id/button_games"
+                android:id="@+id/button_opinion"
                 style="@style/ButtonPrimary"
                 android:layout_marginTop="16dp"
-                android:text="@string/games"
+                android:text="@string/opinion"
                 app:layout_constraintEnd_toEndOf="@+id/button_travel"
                 app:layout_constraintStart_toStartOf="@+id/button_travel"
                 app:layout_constraintTop_toBottomOf="@id/button_travel" />
@@ -174,9 +174,9 @@
                 style="@style/ButtonPrimary"
                 android:layout_marginTop="16dp"
                 android:text="@string/podcasts"
-                app:layout_constraintEnd_toEndOf="@+id/button_games"
-                app:layout_constraintStart_toStartOf="@+id/button_games"
-                app:layout_constraintTop_toBottomOf="@id/button_games" />
+                app:layout_constraintEnd_toEndOf="@+id/button_opinion"
+                app:layout_constraintStart_toStartOf="@+id/button_opinion"
+                app:layout_constraintTop_toBottomOf="@id/button_opinion" />
 
             <Button
                 android:id="@+id/button_jobs"

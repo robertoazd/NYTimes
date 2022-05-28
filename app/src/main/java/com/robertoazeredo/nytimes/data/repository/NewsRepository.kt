@@ -5,5 +5,5 @@ import retrofit2.Call
 
 class NewsRepository {
 
-    fun getNews(): Call<String> = ApiService.newsApi.getNews()
+    fun getNews(section: String): Call<String> = ApiService.newsApi.getNews(section = section)
 }

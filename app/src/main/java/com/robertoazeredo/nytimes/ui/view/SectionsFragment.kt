@@ -39,19 +39,19 @@ class SectionsFragment : Fragment() {
         binding.buttonUs.setOnClickListener {
             findNavController().navigate(
                 SectionsFragmentDirections
-                    .actionSectionsFragmentToArticlesFragment("us")
+                    .actionSectionsFragmentToArticlesFragment("u.s.")
             )
         }
-        binding.buttonPolitics.setOnClickListener {
+        binding.buttonClimate.setOnClickListener {
             findNavController().navigate(
                 SectionsFragmentDirections
-                    .actionSectionsFragmentToArticlesFragment("politics")
+                    .actionSectionsFragmentToArticlesFragment("climate")
             )
         }
         binding.buttonNy.setOnClickListener {
             findNavController().navigate(
                 SectionsFragmentDirections
-                    .actionSectionsFragmentToArticlesFragment("ny")
+                    .actionSectionsFragmentToArticlesFragment("new york")
             )
         }
         binding.buttonBusiness.setOnClickListener {
@@ -63,7 +63,7 @@ class SectionsFragment : Fragment() {
         binding.buttonTech.setOnClickListener {
             findNavController().navigate(
                 SectionsFragmentDirections
-                    .actionSectionsFragmentToArticlesFragment("tech")
+                    .actionSectionsFragmentToArticlesFragment("technology")
             )
         }
         binding.buttonScience.setOnClickListener {
@@ -102,10 +102,10 @@ class SectionsFragment : Fragment() {
                     .actionSectionsFragmentToArticlesFragment("travel")
             )
         }
-        binding.buttonGames.setOnClickListener {
+        binding.buttonOpinion.setOnClickListener {
             findNavController().navigate(
                 SectionsFragmentDirections
-                    .actionSectionsFragmentToArticlesFragment("games")
+                    .actionSectionsFragmentToArticlesFragment("opinion")
             )
         }
         binding.buttonPodcasts.setOnClickListener {
@@ -117,7 +117,7 @@ class SectionsFragment : Fragment() {
         binding.buttonJobs.setOnClickListener {
             findNavController().navigate(
                 SectionsFragmentDirections
-                    .actionSectionsFragmentToArticlesFragment("jobs")
+                    .actionSectionsFragmentToArticlesFragment("job market")
             )
         }
     }

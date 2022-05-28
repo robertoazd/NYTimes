@@ -37,7 +37,7 @@ class ArticlesFragment : Fragment() {
     }
 
     private fun getNews() {
-        NewsRepository().getNews().enqueue(object : Callback<String>{
+        NewsRepository().getNews(args.section).enqueue(object : Callback<String>{
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 println(response)
             }

@@ -5,7 +5,7 @@
     <string name="sections">Sections</string>
     <string name="world">World</string>
     <string name="us">U.S.</string>
-    <string name="politics">Politics</string>
+    <string name="climate">Climate</string>
     <string name="ny">N.Y.</string>
     <string name="business">Business</string>
     <string name="tech">Tech</string>
@@ -15,7 +15,7 @@
     <string name="food">Food</string>
     <string name="travel">Travel</string>
     <string name="arts">Arts</string>
-    <string name="games">Games</string>
+    <string name="opinion">Opinion</string>
     <string name="podcasts">Podcasts</string>
     <string name="jobs">Jobs</string>
 </resources>
