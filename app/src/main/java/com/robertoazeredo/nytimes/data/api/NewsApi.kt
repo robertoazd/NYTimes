@@ -1,5 +1,6 @@
 package com.robertoazeredo.nytimes.data.api
 
+import com.robertoazeredo.nytimes.data.model.NewsResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -11,5 +12,5 @@ interface NewsApi {
     fun getNews(
         @Path("section") section: String,
         @Query("api-key") apiKey: String = "HAvkXB7TKnNJNoOw3ZDzADMfT2pmJal8"
-    ): Call<String>
+    ): Call<NewsResponse>
 }
