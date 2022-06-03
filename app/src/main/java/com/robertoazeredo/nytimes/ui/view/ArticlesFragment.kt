@@ -31,10 +31,22 @@ class ArticlesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupView()
+        setupObservables()
         viewModel.getNews(section = args.section)
     }
 
     private fun setupView() {
         binding.textSection.text = args.section
+    }
+
+    private fun setupObservables() {
+        viewModel.articles.observe(viewLifecycleOwner) { articles ->
+            if (!articles.isNullOrEmpty()) {
+                println(articles)
+            }
+        }
+        viewModel.errorMessage.observe(viewLifecycleOwner) { errorMessage ->
+            println(errorMessage)
+        }
     }
 }
