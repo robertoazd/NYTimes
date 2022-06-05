@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.robertoazeredo.nytimes.databinding.FragmentArticlesBinding
+import com.robertoazeredo.nytimes.ui.adapter.ArticlesAdapter
 import com.robertoazeredo.nytimes.ui.viewmodel.NewsViewModel
 
 class ArticlesFragment : Fragment() {
@@ -31,6 +33,7 @@ class ArticlesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupView()
+        setupListeners()
         setupObservables()
         viewModel.getNews(section = args.section)
     }
@@ -39,10 +42,17 @@ class ArticlesFragment : Fragment() {
         binding.textSection.text = args.section
     }
 
+    private fun setupListeners() {
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
+
     private fun setupObservables() {
         viewModel.articles.observe(viewLifecycleOwner) { articles ->
             if (!articles.isNullOrEmpty()) {
-                println(articles)
+                val articlesAdapter = ArticlesAdapter(articles)
+                binding.recyclerArticles.adapter = articlesAdapter
             }
         }
         viewModel.errorMessage.observe(viewLifecycleOwner) { errorMessage ->
