@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="16dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -18,7 +19,9 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"
+            tools:visibility="visible"/>
 
         <TextView
             android:id="@+id/text_title"
@@ -43,16 +46,20 @@
             app:layout_constraintEnd_toEndOf="@+id/text_title"
             app:layout_constraintStart_toStartOf="@+id/text_title"
             app:layout_constraintTop_toBottomOf="@+id/text_title"
-            tools:text="ABSTRACT" />
+            tools:text="ABSTRACT"
+            tools:visibility="gone"/>
 
         <TextView
             android:id="@+id/text_published_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
             android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/text_abstract"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/text_title"
             app:layout_constraintTop_toBottomOf="@+id/text_abstract"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="8h ago" />
 
         <TextView
@@ -72,13 +79,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginBottom="16dp"
             android:textSize="12sp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/text_abstract"
+            app:layout_constraintEnd_toEndOf="@+id/text_title"
             app:layout_constraintStart_toEndOf="@+id/text_circle"
             app:layout_constraintTop_toTopOf="@+id/text_published_date"
             tools:text="BYLINE" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_byline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="text_circle, text_byline"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
