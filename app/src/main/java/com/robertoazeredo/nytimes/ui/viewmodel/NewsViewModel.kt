@@ -16,8 +16,8 @@ class NewsViewModel : ViewModel() {
     private val _articles = MutableLiveData<List<Article>?>()
     val articles: LiveData<List<Article>?> get() = _articles
 
-    private val _errorMessage = MutableLiveData<String>()
-    val errorMessage: LiveData<String> get() = _errorMessage
+    private val _errorMessage = MutableLiveData<Int>()
+    val errorMessage: LiveData<Int> get() = _errorMessage
 
     fun getNews(section: String) {
         viewModelScope.launch {

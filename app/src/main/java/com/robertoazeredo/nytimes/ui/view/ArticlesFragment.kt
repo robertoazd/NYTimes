@@ -53,10 +53,16 @@ class ArticlesFragment : Fragment() {
             if (!articles.isNullOrEmpty()) {
                 val articlesAdapter = ArticlesAdapter(articles)
                 binding.recyclerArticles.adapter = articlesAdapter
+
+                binding.progressBar.visibility = View.INVISIBLE
+                binding.scrollSection.visibility = View.VISIBLE
             }
         }
         viewModel.errorMessage.observe(viewLifecycleOwner) { errorMessage ->
-            println(errorMessage)
+            binding.textError.setText(errorMessage)
+
+            binding.progressBar.visibility = View.INVISIBLE
+            binding.textError.visibility = View.VISIBLE
         }
     }
 }
