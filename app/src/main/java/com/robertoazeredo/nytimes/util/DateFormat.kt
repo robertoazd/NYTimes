@@ -6,8 +6,8 @@ import java.util.*
 object DateFormat {
 
     fun getDate(inputDate: String): String {
-        val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
-        val outputFormat = SimpleDateFormat("MM-dd-yyyy", Locale.getDefault())
+        val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.ENGLISH)
+        val outputFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.ENGLISH)
         val date = inputFormat.parse(inputDate)
         val formattedDate = if (date != null) {
             outputFormat.format(date)
@@ -16,18 +16,4 @@ object DateFormat {
         }
         return formattedDate
     }
-
-//    fun getDate2(inputDate: String): String {
-//        val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
-//        val date = inputFormat.parse(inputDate)
-//        val formattedDate = if (date != null) {
-//            date.day
-//            date.month
-//            date.year
-//            "May 4, 2022"
-//        } else {
-//            ""
-//        }
-//        return formattedDate
-//    }
 }
