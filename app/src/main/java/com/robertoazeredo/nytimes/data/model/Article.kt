@@ -1,7 +1,10 @@
 package com.robertoazeredo.nytimes.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Article(
     @Json(name = "slug_name")
     val slugName: String?,
@@ -27,4 +30,4 @@ data class Article(
     val materialTypeFacet: String?,
     @Json(name = "multimedia")
     val multimedia: List<Multimedia>?
-)
+): Parcelable

@@ -32,5 +32,17 @@
         <argument
             android:name="section"
             app:argType="string" />
+        <action
+            android:id="@+id/action_articlesFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.robertoazeredo.nytimes.ui.view.ArticleDetailFragment"
+        android:label="fragment_article_detail"
+        tools:layout="@layout/fragment_article_detail" >
+        <argument
+            android:name="article"
+            app:argType="com.robertoazeredo.nytimes.data.model.Article" />
     </fragment>
 </navigation>

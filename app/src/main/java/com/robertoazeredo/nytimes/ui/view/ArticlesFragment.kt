@@ -52,7 +52,8 @@ class ArticlesFragment : Fragment() {
         viewModel.articles.observe(viewLifecycleOwner) { articles ->
             if (!articles.isNullOrEmpty()) {
                 val articlesAdapter = ArticlesAdapter(articles = articles, onItemClick = { article ->
-
+                    findNavController().navigate(ArticlesFragmentDirections
+                        .actionArticlesFragmentToArticleDetailFragment(article))
                 })
                 binding.recyclerArticles.adapter = articlesAdapter
 
