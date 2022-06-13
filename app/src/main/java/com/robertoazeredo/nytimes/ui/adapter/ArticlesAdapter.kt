@@ -10,7 +10,8 @@ import com.robertoazeredo.nytimes.databinding.ItemArticleBinding
 import com.robertoazeredo.nytimes.util.DateFormat
 
 class ArticlesAdapter(
-    private val articles: List<Article>
+    private val articles: List<Article>,
+    private val onItemClick: (article: Article) -> Unit
 ) : RecyclerView.Adapter<ArticlesAdapter.ArticleViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
@@ -20,7 +21,7 @@ class ArticlesAdapter(
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        holder.bind(articles[position])
+        holder.bind(articles[position], onItemClick)
     }
 
     override fun getItemCount() = articles.size
@@ -29,7 +30,7 @@ class ArticlesAdapter(
         private val binding: ItemArticleBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(article: Article) {
+        fun bind(article: Article, onItemClick: (article: Article) -> Unit) {
 
             val articleImage = article.multimedia?.first { multimedia ->
                 multimedia.format == "mediumThreeByTwo440"
@@ -60,6 +61,10 @@ class ArticlesAdapter(
                 binding.textByline.text = article.byline
             } else {
                 binding.groupByline.visibility = View.GONE
+            }
+
+            binding.root.setOnClickListener {
+                onItemClick.invoke(article)
             }
         }
     }

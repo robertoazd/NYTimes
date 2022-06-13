@@ -51,7 +51,9 @@ class ArticlesFragment : Fragment() {
     private fun setupObservables() {
         viewModel.articles.observe(viewLifecycleOwner) { articles ->
             if (!articles.isNullOrEmpty()) {
-                val articlesAdapter = ArticlesAdapter(articles)
+                val articlesAdapter = ArticlesAdapter(articles = articles, onItemClick = { article ->
+
+                })
                 binding.recyclerArticles.adapter = articlesAdapter
 
                 binding.progressBar.visibility = View.INVISIBLE
