@@ -95,6 +95,6 @@
             android:layout_height="wrap_content"
             app:constraint_referenced_ids="text_circle, text_byline"/>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

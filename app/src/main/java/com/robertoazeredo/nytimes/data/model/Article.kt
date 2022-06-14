@@ -10,6 +10,8 @@ data class Article(
     val slugName: String?,
     @Json(name = "section")
     val section: String?,
+    @Json(name = "subsection")
+    val subsection: String?,
     @Json(name = "title")
     val title: String?,
     @Json(name = "abstract")
