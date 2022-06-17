@@ -32,7 +32,7 @@ class ArticlesAdapter(
 
         fun bind(article: Article, onItemClick: (article: Article) -> Unit) {
 
-            val articleImage = article.multimedia?.first { multimedia ->
+            val articleImage = article.multimedia?.firstOrNull { multimedia ->
                 multimedia.format == "mediumThreeByTwo440"
             }
 

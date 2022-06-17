@@ -1,14 +1,23 @@
 package com.robertoazeredo.nytimes.ui.view
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.RelativeSizeSpan
+import android.util.Size
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.robertoazeredo.nytimes.databinding.FragmentArticleDetailBinding
 import com.robertoazeredo.nytimes.util.DateFormat
+
 
 class ArticleDetailFragment : Fragment() {
 
@@ -35,11 +44,15 @@ class ArticleDetailFragment : Fragment() {
 
         binding.textSection.text = article.section
 
-        binding.textSubsection.text = article.subsection
+        if (!article.subsection.isNullOrEmpty()) {
+            binding.textSubsection.text = article.subsection
+        } else {
+            binding.textSubsection.visibility = View.GONE
+        }
 
         binding.textTitle.text = article.title
 
-        val articleImage = article.multimedia?.first { multimedia ->
+        val articleImage = article.multimedia?.firstOrNull { multimedia ->
             multimedia.format == "mediumThreeByTwo440"
         }
 
@@ -49,27 +62,26 @@ class ArticleDetailFragment : Fragment() {
                 .load(articleImage.url)
                 .centerCrop()
                 .into(binding.imageThumbnailStandard)
+
+            val articleCaption = article.multimedia.first().caption
+            val articleCopyright = article.multimedia.first().copyright
+
+            if (!articleCaption.isNullOrEmpty() && !articleCopyright.isNullOrEmpty()) {
+
+                val spannableString = SpannableString("$articleCaption $articleCopyright")
+                spannableString.setSpan(
+                    RelativeSizeSpan(0.75.toFloat()),
+                    articleCaption.length,
+                    articleCaption.length + articleCopyright.length,
+                    Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+                )
+                binding.textCaption.text = spannableString
+            } else {
+                binding.textCaption.visibility = View.GONE
+            }
         } else {
-            binding.imageThumbnailStandard.visibility = View.GONE
+            binding.groupImage.visibility = View.GONE
         }
-
-        val articleCaption = article.multimedia?.first()?.caption
-
-        if (articleCaption.isNullOrEmpty()) {
-            binding.textCaption.text = articleCaption
-        } else {
-            binding.groupCaption.visibility = View.GONE
-        }
-
-
-        val articleCopyright = article.multimedia?.first()?.copyright
-
-        if (articleCopyright.isNullOrEmpty()) {
-            binding.textCopyright.text = articleCopyright
-        } else {
-            binding.groupCaption.visibility = View.GONE
-        }
-
 
         if (!article.abstract.isNullOrEmpty()) {
             binding.textAbstract.text = article.abstract
@@ -88,6 +100,13 @@ class ArticleDetailFragment : Fragment() {
     }
 
     private fun setupListeners() {
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
 
+        binding.buttonUrl.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(args.article.url))
+            ContextCompat.startActivity(requireContext(), browserIntent, null)
+        }
     }
 }
