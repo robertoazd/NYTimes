@@ -1,11 +1,10 @@
 package com.robertoazeredo.nytimes.ui.view
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.robertoazeredo.nytimes.R
 import com.robertoazeredo.nytimes.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -27,6 +26,20 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupListeners() {
+        binding.toolbar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.light_theme -> {
+                    println("Light")
+                    true
+                }
+                R.id.dark_theme -> {
+                    println("Dark")
+                    true
+                }
+                else -> false
+            }
+        }
+
         binding.buttonSections.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections
                 .actionHomeFragmentToSectionsFragment())
