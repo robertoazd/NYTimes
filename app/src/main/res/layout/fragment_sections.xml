@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.SectionsFragment">
+    tools:context=".ui.view.SectionsFragment"
+    style="@style/BackgroundStyle">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/TintStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,19 +43,14 @@
                 android:id="@+id/text_sections"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                style="@style/TextSection"
                 android:text="@string/sections"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/button_world"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/world"
@@ -63,7 +60,7 @@
 
             <Button
                 android:id="@+id/button_us"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/us"
                 app:layout_constraintEnd_toEndOf="@+id/button_world"
@@ -72,7 +69,7 @@
 
             <Button
                 android:id="@+id/button_climate"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/climate"
                 app:layout_constraintEnd_toEndOf="@+id/button_us"
@@ -81,7 +78,7 @@
 
             <Button
                 android:id="@+id/button_ny"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/ny"
                 app:layout_constraintEnd_toEndOf="@+id/button_climate"
@@ -90,7 +87,7 @@
 
             <Button
                 android:id="@+id/button_business"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/business"
                 app:layout_constraintEnd_toEndOf="@+id/button_ny"
@@ -99,7 +96,7 @@
 
             <Button
                 android:id="@+id/button_tech"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/tech"
                 app:layout_constraintEnd_toEndOf="@+id/button_business"
@@ -108,7 +105,7 @@
 
             <Button
                 android:id="@+id/button_science"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/science"
                 app:layout_constraintEnd_toEndOf="@+id/button_tech"
@@ -117,7 +114,7 @@
 
             <Button
                 android:id="@+id/button_sports"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/sports"
                 app:layout_constraintEnd_toEndOf="@+id/button_science"
@@ -126,7 +123,7 @@
 
             <Button
                 android:id="@+id/button_arts"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/arts"
                 app:layout_constraintEnd_toEndOf="@+id/button_sports"
@@ -135,7 +132,7 @@
 
             <Button
                 android:id="@+id/button_books"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/books"
                 app:layout_constraintEnd_toEndOf="@+id/button_arts"
@@ -144,7 +141,7 @@
 
             <Button
                 android:id="@+id/button_food"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/food"
                 app:layout_constraintEnd_toEndOf="@+id/button_books"
@@ -153,7 +150,7 @@
 
             <Button
                 android:id="@+id/button_travel"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/travel"
                 app:layout_constraintEnd_toEndOf="@+id/button_food"
@@ -162,7 +159,7 @@
 
             <Button
                 android:id="@+id/button_opinion"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/opinion"
                 app:layout_constraintEnd_toEndOf="@+id/button_travel"
@@ -171,7 +168,7 @@
 
             <Button
                 android:id="@+id/button_podcasts"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:text="@string/podcasts"
                 app:layout_constraintEnd_toEndOf="@+id/button_opinion"
@@ -180,7 +177,7 @@
 
             <Button
                 android:id="@+id/button_jobs"
-                style="@style/ButtonPrimary"
+                style="@style/ButtonSecondary"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="24dp"
                 android:text="@string/jobs"

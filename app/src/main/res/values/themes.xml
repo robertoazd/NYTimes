@@ -3,23 +3,78 @@
     <style name="Theme.NYTimes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryVariant">@color/greyBlack</item>
+        <item name="colorPrimaryVariant">@color/blackDark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/greyLight</item>
-        <item name="colorSecondaryVariant">@color/greyLight</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
         <!-- Customize your theme here. -->
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/white</item>
     </style>
 
-    <style name="ButtonPrimary" parent="TextAppearance.AppCompat.Widget.Button">
+    <style name="ButtonSecondary" parent="TextAppearance.AppCompat.Widget.Button">
         <item name="android:drawableRight">@drawable/ic_arrow_forward_24</item>
+        <item name="android:background">@drawable/shape_button</item>
+        <item name="backgroundTint">@color/black</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="ButtonPrimary">
+        <item name="android:background">@drawable/shape_button</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="TextSection">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSubsection">
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextTitleCard">
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BackgroundCardView">
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="TintStyle">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="BackgroundStyle">
+        <item name="android:background">@drawable/shape_background_light</item>
     </style>
 </resources>

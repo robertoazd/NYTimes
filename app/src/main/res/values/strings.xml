@@ -27,4 +27,5 @@
     <string name="error_404">The requested resource does not exist.</string>
     <string name="error_500">A generic error occurred on the server.</string>
     <string name="error_503">The requested service is not available.</string>
+    <string name="know_more">know more</string>
 </resources>
