@@ -2,6 +2,7 @@ package com.robertoazeredo.nytimes.ui.view
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.robertoazeredo.nytimes.R
@@ -29,11 +30,11 @@ class HomeFragment : Fragment() {
         binding.toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.light_theme -> {
-                    println("Light")
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                     true
                 }
                 R.id.dark_theme -> {
-                    println("Dark")
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                     true
                 }
                 else -> false

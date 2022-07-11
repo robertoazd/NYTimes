@@ -28,4 +28,6 @@
     <string name="error_500">A generic error occurred on the server.</string>
     <string name="error_503">The requested service is not available.</string>
     <string name="know_more">know more</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="light_theme">Light theme</string>
 </resources>

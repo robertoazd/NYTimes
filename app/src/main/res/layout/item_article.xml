@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginBottom="16dp"
+    style="@style/BackgroundCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    style="@style/BackgroundCardView">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,13 +21,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/text_title"
+            style="@style/TextTitleCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextTitleCard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_thumbnail_standard"
@@ -36,20 +35,22 @@
 
         <TextView
             android:id="@+id/text_abstract"
+            style="@style/TextStyleAll"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textSize="14sp"
-            android:maxLines="1"
             android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/text_title"
             app:layout_constraintStart_toStartOf="@+id/text_title"
             app:layout_constraintTop_toBottomOf="@+id/text_title"
             tools:text="ABSTRACT"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/text_published_date"
+            style="@style/TextStyleAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -75,11 +76,12 @@
 
         <TextView
             android:id="@+id/text_byline"
+            style="@style/TextStyleAll"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:textSize="12sp"
             android:layout_marginBottom="16dp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/text_title"
             app:layout_constraintStart_toEndOf="@+id/text_circle"
@@ -90,7 +92,7 @@
             android:id="@+id/group_byline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="text_circle, text_byline"/>
+            app:constraint_referenced_ids="text_circle, text_byline" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
