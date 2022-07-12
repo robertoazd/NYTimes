@@ -1,5 +1,7 @@
 package com.robertoazeredo.nytimes.ui.view
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatDelegate
@@ -28,13 +30,19 @@ class HomeFragment : Fragment() {
 
     private fun setupListeners() {
         binding.toolbar.setOnMenuItemClickListener { menuItem ->
+
+            val sharedPreferences = requireContext().getSharedPreferences("SharedPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+
             when (menuItem.itemId) {
                 R.id.light_theme -> {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    editor.putBoolean("MODE_NIGHT", false).apply()
                     true
                 }
                 R.id.dark_theme -> {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    editor.putBoolean("MODE_NIGHT", true).apply()
                     true
                 }
                 else -> false
