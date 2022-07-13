@@ -15,6 +15,10 @@
         <item name="android:navigationBarColor" tools:targetApi="21">@color/white</item>
     </style>
 
+    <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:layout">@layout/activity_splash_screen</item>
+    </style>
+
     <style name="ButtonSecondary" parent="TextAppearance.AppCompat.Widget.Button">
         <item name="android:drawableRight">@drawable/ic_arrow_forward_24</item>
         <item name="android:background">@drawable/shape_button</item>

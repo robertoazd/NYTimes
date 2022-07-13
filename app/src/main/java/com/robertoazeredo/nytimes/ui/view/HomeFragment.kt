@@ -2,11 +2,13 @@ package com.robertoazeredo.nytimes.ui.view
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.internal.ThemeEnforcement
 import com.robertoazeredo.nytimes.R
 import com.robertoazeredo.nytimes.databinding.FragmentHomeBinding
 
