@@ -30,6 +30,13 @@ Algumas das coisas que você pode fazer com o NYTimes:
 * Clicar em saiba mais e ser direcionado para o site oficial
 * Trocar o tema do aplicativo
 
+<h2 align="center"> Funcionamento do Aplicativo </h2> <br>
+<p align="center">
+     <img alt="gif" src="https://github.com/robertoazd/NYTimes/blob/develop/gifs/light.gif" width="250" height="500"/>
+     <img alt="gif" src="https://github.com/robertoazd/NYTimes/blob/develop/gifs/change.gif" width="250" height="500"/>
+     <img alt="gif" src="https://github.com/robertoazd/NYTimes/blob/develop/gifs/dark.gif" width="250" height="500"/>
+</p>
+
 ## IDE e Linguagem
 * Android Studio
 * Kotlin
