@@ -7,11 +7,14 @@ import androidx.lifecycle.viewModelScope
 import com.robertoazeredo.nytimes.data.api.Result
 import com.robertoazeredo.nytimes.data.model.Article
 import com.robertoazeredo.nytimes.data.repository.NewsRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class NewsViewModel : ViewModel() {
-
-    private val newsRepository = NewsRepository()
+@HiltViewModel
+class NewsViewModel @Inject constructor(
+    private val newsRepository: NewsRepository
+) : ViewModel() {
 
     private val _articles = MutableLiveData<List<Article>?>()
     val articles: LiveData<List<Article>?> get() = _articles

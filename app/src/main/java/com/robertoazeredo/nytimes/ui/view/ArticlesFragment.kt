@@ -5,21 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.robertoazeredo.nytimes.databinding.FragmentArticlesBinding
 import com.robertoazeredo.nytimes.ui.adapter.ArticlesAdapter
 import com.robertoazeredo.nytimes.ui.viewmodel.NewsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ArticlesFragment : Fragment() {
 
     private lateinit var binding: FragmentArticlesBinding
     private val args: ArticlesFragmentArgs by navArgs()
 
-    private val viewModel: NewsViewModel by lazy {
-        ViewModelProvider(this).get(NewsViewModel::class.java)
-    }
+    private val viewModel: NewsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
