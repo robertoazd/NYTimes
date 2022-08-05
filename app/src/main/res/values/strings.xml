@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">NYTimes</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sections">Sections</string>
+    <string name="world">World</string>
+    <string name="us">U.S.</string>
+    <string name="climate">Climate</string>
+    <string name="ny">N.Y.</string>
+    <string name="business">Business</string>
+    <string name="tech">Tech</string>
+    <string name="science">Science</string>
+    <string name="sports">Sports</string>
+    <string name="books">Books</string>
+    <string name="food">Food</string>
+    <string name="travel">Travel</string>
+    <string name="arts">Arts</string>
+    <string name="opinion">Opinion</string>
+    <string name="podcasts">Podcasts</string>
+    <string name="jobs">Jobs</string>
+
+    <string name="error_no_data">We couldn\'t find any news in this section.</string>
+    <string name="error_unknown">Oops, something went wrong. Please try again later.</string>
+    <string name="error_400">Invalid request.</string>
+    <string name="error_401">Failed to authenticate with the server.</string>
+    <string name="error_403">Authenticated but does not have permission to access the requested resource.</string>
+    <string name="error_404">The requested resource does not exist.</string>
+    <string name="error_500">A generic error occurred on the server.</string>
+    <string name="error_503">The requested service is not available.</string>
+    <string name="know_more">know more</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="light_theme">Light theme</string>
+    <string name="nytimes">NYTimes</string>
 </resources>

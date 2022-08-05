@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.robertoazeredo.nytimes.ui.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sectionsFragment"
+            app:destination="@id/sectionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sectionsFragment"
+        android:name="com.robertoazeredo.nytimes.ui.view.SectionsFragment"
+        android:label="fragment_sections"
+        tools:layout="@layout/fragment_sections" >
+        <action
+            android:id="@+id/action_sectionsFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.robertoazeredo.nytimes.ui.view.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" >
+        <argument
+            android:name="section"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_articlesFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.robertoazeredo.nytimes.ui.view.ArticleDetailFragment"
+        android:label="fragment_article_detail"
+        tools:layout="@layout/fragment_article_detail" >
+        <argument
+            android:name="article"
+            app:argType="com.robertoazeredo.nytimes.data.model.Article" />
+    </fragment>
+</navigation>

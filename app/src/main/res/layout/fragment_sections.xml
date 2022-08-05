@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.SectionsFragment"
+    style="@style/BackgroundStyle">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/TintStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back_24">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/nytimes_text_horizontal_logo" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_sections"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextSection"
+                android:text="@string/sections"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_world"
+                style="@style/ButtonSecondary"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/engravers_old_english_bt"
+                android:text="@string/world"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_sections" />
+
+            <Button
+                android:id="@+id/button_us"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/us"
+                app:layout_constraintEnd_toEndOf="@+id/button_world"
+                app:layout_constraintStart_toStartOf="@+id/button_world"
+                app:layout_constraintTop_toBottomOf="@id/button_world" />
+
+            <Button
+                android:id="@+id/button_climate"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/climate"
+                app:layout_constraintEnd_toEndOf="@+id/button_us"
+                app:layout_constraintStart_toStartOf="@+id/button_us"
+                app:layout_constraintTop_toBottomOf="@id/button_us" />
+
+            <Button
+                android:id="@+id/button_ny"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/ny"
+                app:layout_constraintEnd_toEndOf="@+id/button_climate"
+                app:layout_constraintStart_toStartOf="@+id/button_climate"
+                app:layout_constraintTop_toBottomOf="@id/button_climate" />
+
+            <Button
+                android:id="@+id/button_business"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/business"
+                app:layout_constraintEnd_toEndOf="@+id/button_ny"
+                app:layout_constraintStart_toStartOf="@+id/button_ny"
+                app:layout_constraintTop_toBottomOf="@id/button_ny" />
+
+            <Button
+                android:id="@+id/button_tech"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/tech"
+                app:layout_constraintEnd_toEndOf="@+id/button_business"
+                app:layout_constraintStart_toStartOf="@+id/button_business"
+                app:layout_constraintTop_toBottomOf="@id/button_business" />
+
+            <Button
+                android:id="@+id/button_science"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/science"
+                app:layout_constraintEnd_toEndOf="@+id/button_tech"
+                app:layout_constraintStart_toStartOf="@+id/button_tech"
+                app:layout_constraintTop_toBottomOf="@id/button_tech" />
+
+            <Button
+                android:id="@+id/button_sports"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/sports"
+                app:layout_constraintEnd_toEndOf="@+id/button_science"
+                app:layout_constraintStart_toStartOf="@+id/button_science"
+                app:layout_constraintTop_toBottomOf="@id/button_science" />
+
+            <Button
+                android:id="@+id/button_arts"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/arts"
+                app:layout_constraintEnd_toEndOf="@+id/button_sports"
+                app:layout_constraintStart_toStartOf="@+id/button_sports"
+                app:layout_constraintTop_toBottomOf="@id/button_sports" />
+
+            <Button
+                android:id="@+id/button_books"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/books"
+                app:layout_constraintEnd_toEndOf="@+id/button_arts"
+                app:layout_constraintStart_toStartOf="@+id/button_arts"
+                app:layout_constraintTop_toBottomOf="@id/button_arts" />
+
+            <Button
+                android:id="@+id/button_food"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/food"
+                app:layout_constraintEnd_toEndOf="@+id/button_books"
+                app:layout_constraintStart_toStartOf="@+id/button_books"
+                app:layout_constraintTop_toBottomOf="@id/button_books" />
+
+            <Button
+                android:id="@+id/button_travel"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/travel"
+                app:layout_constraintEnd_toEndOf="@+id/button_food"
+                app:layout_constraintStart_toStartOf="@+id/button_food"
+                app:layout_constraintTop_toBottomOf="@id/button_food" />
+
+            <Button
+                android:id="@+id/button_opinion"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/opinion"
+                app:layout_constraintEnd_toEndOf="@+id/button_travel"
+                app:layout_constraintStart_toStartOf="@+id/button_travel"
+                app:layout_constraintTop_toBottomOf="@id/button_travel" />
+
+            <Button
+                android:id="@+id/button_podcasts"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:text="@string/podcasts"
+                app:layout_constraintEnd_toEndOf="@+id/button_opinion"
+                app:layout_constraintStart_toStartOf="@+id/button_opinion"
+                app:layout_constraintTop_toBottomOf="@id/button_opinion" />
+
+            <Button
+                android:id="@+id/button_jobs"
+                style="@style/ButtonSecondary"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/jobs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/button_podcasts"
+                app:layout_constraintStart_toStartOf="@+id/button_podcasts"
+                app:layout_constraintTop_toBottomOf="@id/button_podcasts" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
