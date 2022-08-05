@@ -15,7 +15,7 @@ android {
         minSdk 21
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -24,6 +24,20 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'API_KEY', apiKey
+        }
+        debug {
+            applicationIdSuffix".debug"
+            buildConfigField 'String', 'API_KEY', apiKey
+        }
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'NYTimes'
+            keyPassword '1kcRX6R5AM'
+            storeFile file('../keystore/NYTimes.keystore')
+            storePassword '1kcRX6R5AM'
         }
     }
 
