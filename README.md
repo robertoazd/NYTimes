@@ -9,8 +9,9 @@
 - [Introdução](#introdução)
 - [Funcionalidades](#funcionalidades)
 - [IDE e Linguagem](#ide-e-linguagem)
-- [Especificações técnicas](especificações-técnicas)
-- [Testes unitários](testes-unitarios)
+- [Especificações técnicas](#especificações-técnicas)
+- [Testes unitários](#testes-unitários)
+- [Download do App](#download-do-app)
 
 ## Introdução
 O aplicativo foi desenvolvido com o intuito de buscar as notícias mais recentes do New York Times, onde o usuário seleciona a seção desejada e é direcionado para uma lista das pricipais notícias, podendo selecionar uma notícia para visualizar os detalhes, se o mesmo quiser mais informação pode ser direcionado direto para o site oficial.
@@ -80,6 +81,8 @@ Algumas das coisas que você pode fazer com o NYTimes:
   </a>
 </p>
 
+## Download do App
+[NYTimes - Apk](https://github.com/robertoazd/NYTimes/releases/download/v1.0.0/app-release.apk)
 
 
 
