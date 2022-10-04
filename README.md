@@ -14,7 +14,7 @@
 - [Download do App](#download-do-app)
 
 ## Introdução
-O aplicativo foi desenvolvido com o intuito de buscar as notícias mais recentes do New York Times, onde o usuário seleciona a seção desejada e é direcionado para uma lista das pricipais notícias, podendo selecionar uma notícia para visualizar os detalhes, se o mesmo quiser mais informação pode ser direcionado direto para o site oficial.
+O aplicativo foi desenvolvido com o intuito de buscar as notícias mais recentes do New York Times, onde o usuário seleciona a seção desejada e é direcionado para uma lista das principais notícias, podendo selecionar uma notícia para visualizar os detalhes, se o mesmo quiser mais informação pode ser direcionado direto para o site oficial.
 
 <h1 align="center"> </h1> <br>
 <p align="center">
